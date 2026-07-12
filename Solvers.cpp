@@ -51,10 +51,8 @@ void stepAStar(std::vector<Cell>& grid, std::priority_queue<AStarNode, std::vect
                     parentMap[n] = curr;
                     gScore[n] = tentative_gScore;
                     int fScore = gScore[n] + getManhattanDistance(n, goalCell);
-                    if (!grid[n].astarVisited) {
                         grid[n].astarVisited = true;
                         openSet.push({n, fScore});
-                    }
                 }
             }
         }
